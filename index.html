@@ -24,20 +24,38 @@
       line-height: 1.6;
     }
 
+    /* Hero Section */
     header {
-      background-color: var(--primary-color);
+      position: relative;
+      background: url("images/hero-raised-bed.jpg") no-repeat center center/cover;
       color: white;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 6rem 1rem;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45); /* overlay for readability */
+    }
+
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
     }
 
     header h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
     }
 
     header p {
-      font-size: 1rem;
+      font-size: 1.2rem;
       max-width: 800px;
       margin: 0 auto;
     }
@@ -123,73 +141,31 @@
       <p>
         Raised deep beds help prevent waterlogging by letting rain drain down through the soil. At the same time, they hold onto enough moisture for plants to thrive.
       </p>
-      <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-        <title>Rain draining into raised garden bed</title>
-        <rect x="20" y="60" width="160" height="40" fill="#8B5E3C" />
-        <rect x="25" y="65" width="150" height="30" fill="#5C4033" />
-        <line x1="40" y1="30" x2="40" y2="60" stroke="#2196F3" stroke-width="3" />
-        <line x1="100" y1="20" x2="100" y2="60" stroke="#2196F3" stroke-width="3" />
-        <line x1="160" y1="25" x2="160" y2="60" stroke="#2196F3" stroke-width="3" />
-      </svg>
 
       <h3>2. Combatting Soil Compaction</h3>
       <p>
         Deep beds break through compacted soil (called hardpan), letting roots, water, and air reach deeper. This means healthier and stronger plants.
       </p>
-      <svg viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
-        <title>Soil compaction comparison diagram</title>
-        <rect x="10" y="60" width="80" height="40" fill="#6D4C41"/>
-        <text x="50" y="115" text-anchor="middle" font-size="12">Compacted</text>
-        <rect x="110" y="60" width="80" height="40" fill="#8D6E63"/>
-        <line x1="150" y1="60" x2="150" y2="100" stroke="#B87333" stroke-width="2" />
-        <text x="150" y="115" text-anchor="middle" font-size="12">Loosened</text>
-      </svg>
 
       <h3>3. Maximising Limited Space</h3>
       <p>
         With better soil and root depth, you can grow more in a small area. That means more food from less space.
       </p>
-      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <title>Raised bed with multiple plants</title>
-        <rect x="20" y="60" width="160" height="30" fill="#5D4037"/>
-        <circle cx="40" cy="50" r="5" fill="#4CAF50"/>
-        <circle cx="80" cy="50" r="5" fill="#4CAF50"/>
-        <circle cx="120" cy="50" r="5" fill="#4CAF50"/>
-        <circle cx="160" cy="50" r="5" fill="#4CAF50"/>
-      </svg>
 
       <h3>4. Boosting Soil Fertility Organically</h3>
       <p>
         Deep beds let you add compost and rich materials easily, helping you grow healthy, strong crops without chemicals.
       </p>
-      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <title>Layers of compost in garden bed</title>
-        <rect x="30" y="60" width="140" height="10" fill="#4E342E"/>
-        <rect x="30" y="70" width="140" height="10" fill="#6D4C41"/>
-        <rect x="30" y="80" width="140" height="10" fill="#8D6E63"/>
-        <rect x="30" y="90" width="140" height="10" fill="#A1887F"/>
-      </svg>
 
       <h3>5. Extended Growing Season</h3>
       <p>
         Raised beds warm up faster in spring, so you can plant earlier and grow for longer — a big bonus in the UK!
       </p>
-      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <title>Sun warming a raised garden bed</title>
-        <circle cx="30" cy="30" r="12" fill="#FFD54F"/>
-        <rect x="60" y="60" width="120" height="30" fill="#6D4C41"/>
-      </svg>
 
       <h3>6. Easier to Manage (and Kinder on the Back!)</h3>
       <p>
         Raised beds are easier to reach and care for. You can weed, water, and harvest without bending too far.
       </p>
-      <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
-        <title>Gardener beside raised bed</title>
-        <rect x="100" y="60" width="80" height="30" fill="#6D4C41"/>
-        <circle cx="50" cy="50" r="10" fill="#A1887F"/>
-        <rect x="45" y="60" width="10" height="30" fill="#81C784"/>
-      </svg>
     </section>
 
     <section>
