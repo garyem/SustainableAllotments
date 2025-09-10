@@ -3,182 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn about the environmental impact of deep bed farming and how to make it more sustainable for your allotment." />
-  <title>Deep Bed Farming & Sustainability</title>
+  <meta name="description" content="Explore sustainability in deep bed farming: potential issues and eco-friendly solutions for soil, water, and materials." />
+  <title>Deep Bed Farming: Sustainability Guide</title>
   <style>
     :root {
       --primary-color: #2e7d32;
       --secondary-color: #f1f8e9;
       --accent-color: #c8e6c9;
-      --text-color: #333;
       --background-color: #f9fff9;
+      --text-color: #333;
     }
 
     body {
       font-family: Arial, sans-serif;
       font-size: 1rem;
       margin: 0;
-      padding: 1rem;
+      padding: 0;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
     }
 
-    header {
-      text-align: center;
-      padding: 1rem 0;
+    /* Navigation */
+    nav {
+      background: var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin-bottom: 0.2rem;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
-    p.intro {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      background-color: #fff;
-    }
-
-    th, td {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      text-align: left;
-    }
-
-    th {
-      background-color: var(--accent-color);
-      color: var(--primary-color);
+    nav a {
+      color: white;
+      text-decoration: none;
       font-weight: bold;
     }
 
-    tr:nth-child(even) {
-      background-color: var(--secondary-color);
+    nav a:hover {
+      text-decoration: underline;
     }
 
-    @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-      }
+    /* Hero Section */
+    header {
+      position: relative;
+      background: url("images/sustainable-farming-dbf.png") no-repeat center center/cover;
+      color: white;
+      text-align: center;
+      padding: 6rem 1rem;
+    }
 
-      thead {
-        display: none;
-      }
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45); /* overlay */
+    }
 
-      tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 0.5rem;
-      }
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
+    }
 
-      td {
-        border: none;
-        padding: 0.5rem 0;
-        position: relative;
-        padding-left: 50%;
-        background-color: #fff;
-      }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
 
-      td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0.5rem;
-        top: 0.5rem;
-        font-weight: bold;
-        color: var(--primary-color);
-        width: 45%;
-        white-space: normal;
-      }
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      margin-top: 1.2rem;
+      color: #1b5e20;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
     }
 
     footer {
+      background: #f1f1f1;
+      padding: 2rem 1rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
-      margin-top: 2rem;
+      color: #555;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .button-link {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .button-link:hover {
+      background-color: #256429;
     }
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#soil">Soil</a></li>
+      <li><a href="#water">Water</a></li>
+      <li><a href="#materials">Materials</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
   <header>
     <h1>Deep Bed Farming: Sustainability Guide</h1>
-    <p class="intro">
-      This guide explains how deep bed farming can affect the environment and how you can reduce any problems. The information is explained in a straightforward way to help all growers, no matter their experience.
+    <p>
+      This guide explores the potential environmental challenges that can arise with deep bed farming, such as soil health, water use, and material choices. It also offers practical, eco-friendly ways to overcome these issues so you can garden sustainably and keep your allotment thriving for the long term.
     </p>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <table>
-      <thead>
-        <tr>
-          <th>Sustainability Issue</th>
-          <th>Why It's a Problem</th>
-          <th>How to Fix or Reduce It</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Sustainability Issue">Buying Soil or Compost</td>
-          <td data-label="Why It's a Problem">Bringing in lots of soil or compost from far away uses fuel and may include non-sustainable materials like peat.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Make compost using your own kitchen and garden waste.<br>
-            - Use green manures to build healthy soil.<br>
-            - Buy compost that is local and peat-free.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Materials for Raised Beds</td>
-          <td data-label="Why It's a Problem">Wood that is treated with chemicals can harm soil. Plastic can break down and pollute. Concrete is energy-intensive to make.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Use natural, untreated wood like larch or cedar.<br>
-            - Reuse bricks or other natural materials.<br>
-            - Avoid plastic and pressure-treated wood.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Digging Too Deep</td>
-          <td data-label="Why It's a Problem">Digging too much can damage helpful microbes and insects in the soil. It can also release carbon into the air.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Use a "no-dig" method and add compost on top of the soil.<br>
-            - Let worms and roots improve the soil naturally over time.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Watering in Dry Weather</td>
-          <td data-label="Why It's a Problem">Raised beds can dry out fast in hot or windy weather, which wastes water.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Cover the soil with mulch like straw or compost.<br>
-            - Collect rainwater in water butts.<br>
-            - Use drip irrigation to save water.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Too Much Fertiliser</td>
-          <td data-label="Why It's a Problem">Adding too much compost or manure can cause too many nutrients, which harms soil and nearby water.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Check how your plants grow before adding more compost.<br>
-            - Add compost slowly over time.<br>
-            - Use a mix of materials, not just manure.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <section id="soil">
+      <h2>🌱 Soil Health Challenges</h2>
+      <p>
+        If beds are over-dug or packed with poor-quality soil, fertility can decline over time. 
+        Heavy reliance on shop-bought compost may also lead to sustainability concerns.
+      </p>
+      <ul>
+        <li>Use homemade compost to enrich your beds naturally.</li>
+        <li>Practice crop rotation to maintain balanced soil nutrients.</li>
+        <li>Add green manures or cover crops to reduce erosion and boost fertility.</li>
+      </ul>
+    </section>
+
+    <section id="water">
+      <h2>💧 Water Use & Management</h2>
+      <p>
+        Raised beds can dry out more quickly during warm months, which increases the need for irrigation.
+      </p>
+      <ul>
+        <li>Collect rainwater in barrels to reduce reliance on mains water.</li>
+        <li>Apply mulch (straw, leaves, or woodchips) to lock in soil moisture.</li>
+        <li>Choose drought-resistant plants for dry seasons.</li>
+      </ul>
+    </section>
+
+    <section id="materials">
+      <h2>🪵 Choosing Sustainable Materials</h2>
+      <p>
+        Many raised beds are built with treated timber or new materials, which may not be eco-friendly.
+      </p>
+      <ul>
+        <li>Re-use old wood, pallets, or reclaimed bricks where possible.</li>
+        <li>Avoid pressure-treated wood that may leach chemicals into the soil.</li>
+        <li>Explore alternatives like woven willow, stone, or metal troughs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🌍 Final Thoughts</h2>
+      <p>
+        By planning carefully and adopting eco-friendly practices, you can enjoy the benefits of deep bed farming while protecting the environment. 
+        Sustainable choices in soil care, water use, and materials will keep your allotment productive for years to come.
+      </p>
+      <div style="text-align:center;">
+        <a href="index.html" class="button-link">← Back to Introduction</a>
+      </div>
+    </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Your Community Garden Group. All rights reserved.</p>
+    <p>
+      <a href="#top">Back to Top</a> |
+      <a href="index.html">Home</a> |
+      <a href="#soil">Soil</a> |
+      <a href="#water">Water</a> |
+      <a href="#materials">Materials</a>
+    </p>
   </footer>
+
 </body>
 </html>
