@@ -3,178 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Learn about the environmental impact of deep bed farming and how to make it more sustainable for your allotment." />
-  <title>Deep Bed Farming & Sustainability</title>
+  <meta name="description" content="Learn what deep bed farming is and why it's great for UK allotments. Discover benefits, considerations, and sustainable tips." />
+  <title>Introduction to Deep Bed Farming (DBF)</title>
   <style>
     :root {
       --primary-color: #2e7d32;
       --secondary-color: #f1f8e9;
       --accent-color: #c8e6c9;
-      --text-color: #333;
       --background-color: #f9fff9;
+      --text-color: #333;
     }
 
     body {
       font-family: Arial, sans-serif;
       font-size: 1rem;
       margin: 0;
-      padding: 1rem;
+      padding: 0;
       background-color: var(--background-color);
       color: var(--text-color);
       line-height: 1.6;
     }
 
+    /* Hero Section */
     header {
+      position: relative;
+      background: url("images/hero-raised-bed.jpg") no-repeat center center/cover;
+      color: white;
       text-align: center;
-      padding: 1rem 0;
+      padding: 6rem 1rem;
     }
 
-    h1 {
-      font-size: 1.8rem;
-      color: var(--primary-color);
-      margin-bottom: 0.2rem;
-    }
-
-    p.intro {
-      font-size: 1rem;
-      color: #555;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto 1.5rem;
-    }
-
-    table {
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      background-color: #fff;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.45); /* overlay for readability */
     }
 
-    th, td {
-      border: 1px solid #ddd;
-      padding: 1rem;
-      text-align: left;
+    header h1,
+    header p {
+      position: relative;
+      z-index: 1;
     }
 
-    th {
-      background-color: var(--accent-color);
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      background: white;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
       color: var(--primary-color);
-      font-weight: bold;
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
     }
 
-    tr:nth-child(even) {
-      background-color: var(--secondary-color);
+    h3 {
+      margin-top: 1.2rem;
+      color: #1b5e20;
     }
 
-    @media (max-width: 768px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-        width: 100%;
-      }
+    ul {
+      padding-left: 1.2rem;
+    }
 
-      thead {
-        display: none;
-      }
+    li {
+      margin-bottom: 0.75rem;
+    }
 
-      tr {
-        margin-bottom: 1rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        padding: 0.5rem;
-      }
-
-      td {
-        border: none;
-        padding: 0.5rem 0;
-        position: relative;
-        padding-left: 50%;
-        background-color: #fff;
-      }
-
-      td::before {
-        content: attr(data-label);
-        position: absolute;
-        left: 0.5rem;
-        top: 0.5rem;
-        font-weight: bold;
-        color: var(--primary-color);
-        width: 45%;
-        white-space: normal;
-      }
+    svg {
+      display: block;
+      margin: 1rem auto;
+      max-width: 100%;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
       color: #666;
+      margin: 2rem auto;
+      padding-bottom: 2rem;
+    }
+
+    .button-link {
+      display: inline-block;
+      background-color: var(--primary-color);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
       margin-top: 2rem;
+    }
+
+    .button-link:hover {
+      background-color: #256429;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Deep Bed Farming: Sustainability Guide</h1>
-    <p class="intro">
-      This guide explains how deep bed farming can affect the environment and how you can reduce any problems. The information is explained in a straightforward way to help all growers, no matter their experience.
+    <h1>Introduction to Deep Bed Farming</h1>
+    <p>
+      Deep Bed Farming (DBF) is a simple and natural way of gardening. It gives plants more room to grow by making the soil deeper, healthier, and easier to manage. It's especially useful on UK allotments.
     </p>
   </header>
 
   <main>
-    <table>
-      <thead>
-        <tr>
-          <th>Sustainability Issue</th>
-          <th>Why It's a Problem</th>
-          <th>How to Fix or Reduce It</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="Sustainability Issue">Buying Soil or Compost</td>
-          <td data-label="Why It's a Problem">Bringing in lots of soil or compost from far away uses fuel and may include non-sustainable materials like peat.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Make compost using your own kitchen and garden waste.<br>
-            - Use green manures to build healthy soil.<br>
-            - Buy compost that is local and peat-free.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Materials for Raised Beds</td>
-          <td data-label="Why It's a Problem">Wood that is treated with chemicals can harm soil. Plastic can break down and pollute. Concrete is energy-intensive to make.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Use natural, untreated wood like larch or cedar.<br>
-            - Reuse bricks or other natural materials.<br>
-            - Avoid plastic and pressure-treated wood.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Digging Too Deep</td>
-          <td data-label="Why It's a Problem">Digging too much can damage helpful microbes and insects in the soil. It can also release carbon into the air.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Use a "no-dig" method and add compost on top of the soil.<br>
-            - Let worms and roots improve the soil naturally over time.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Watering in Dry Weather</td>
-          <td data-label="Why It's a Problem">Raised beds can dry out fast in hot or windy weather, which wastes water.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Cover the soil with mulch like straw or compost.<br>
-            - Collect rainwater in water butts.<br>
-            - Use drip irrigation to save water.
-          </td>
-        </tr>
-        <tr>
-          <td data-label="Sustainability Issue">Too Much Fertiliser</td>
-          <td data-label="Why It's a Problem">Adding too much compost or manure can cause too many nutrients, which harms soil and nearby water.</td>
-          <td data-label="How to Fix or Reduce It">
-            - Check how your plants grow before adding more compost.<br>
-            - Add compost slowly over time.<br>
-            - Use a mix of materials, not just manure.
-          </td>
-        </tr>
-      </tbody>
-    </table>
+
+    <section>
+      <h2>✅ Why Deep Bed Farming is a Smart Move for a UK Allotment</h2>
+
+      <h3>1. Improved Drainage in a Rain-Prone Climate</h3>
+      <p>
+        Raised deep beds help prevent waterlogging by letting rain drain down through the soil. At the same time, they hold onto enough moisture for plants to thrive.
+      </p>
+
+      <h3>2. Combatting Soil Compaction</h3>
+      <p>
+        Deep beds break through compacted soil (called hardpan), letting roots, water, and air reach deeper. This means healthier and stronger plants.
+      </p>
+
+      <h3>3. Maximising Limited Space</h3>
+      <p>
+        With better soil and root depth, you can grow more in a small area. That means more food from less space.
+      </p>
+
+      <h3>4. Boosting Soil Fertility Organically</h3>
+      <p>
+        Deep beds let you add compost and rich materials easily, helping you grow healthy, strong crops without chemicals.
+      </p>
+
+      <h3>5. Extended Growing Season</h3>
+      <p>
+        Raised beds warm up faster in spring, so you can plant earlier and grow for longer — a big bonus in the UK!
+      </p>
+
+      <h3>6. Easier to Manage (and Kinder on the Back!)</h3>
+      <p>
+        Raised beds are easier to reach and care for. You can weed, water, and harvest without bending too far.
+      </p>
+    </section>
+
+    <section>
+      <h2>⚠️ Things to Consider Before You Start</h2>
+      <p><strong>Initial Effort & Materials:</strong> Building deep beds takes work and materials like wood, compost, and topsoil. But once they’re in place, they’re easy to maintain.</p>
+      <p><strong>Watering in Drier Months:</strong> Raised beds dry out faster in hot weather. Use mulch and plan for smart watering (like using saved rainwater).</p>
+      <p><strong>Plot Rules:</strong> Some allotment sites have rules about bed height or materials. Check before you build.</p>
+    </section>
+
+    <section>
+      <h2>🌱 Sustainable Tips</h2>
+      <ul>
+        <li>Use old bricks, reclaimed wood, or pallets for bed frames.</li>
+        <li>Layer cardboard, compost, and straw like lasagna — no digging needed.</li>
+        <li>Grow green manures and companion plants to reduce pests naturally.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🧑‍🌾 Final Verdict</h2>
+      <p>
+        Deep bed farming is a smart, eco-friendly method for UK gardeners. It helps you grow more food, protect your soil, and enjoy your plot with less effort over time.
+      </p>
+      <div style="text-align:center;">
+        <a href="deep-bed-farming-sustainability.html" class="button-link">Next: Environmental Considerations →</a>
+      </div>
+    </section>
+
   </main>
 
   <footer>
