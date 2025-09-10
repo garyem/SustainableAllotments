@@ -24,6 +24,33 @@
       line-height: 1.6;
     }
 
+    /* Navigation */
+    nav {
+      background: var(--primary-color);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     /* Hero Section */
     header {
       position: relative;
@@ -40,11 +67,12 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.45); /* overlay for readability */
+      background: rgba(0, 0, 0, 0.45); /* overlay */
     }
 
     header h1,
-    header p {
+    header p,
+    header .button-link {
       position: relative;
       z-index: 1;
     }
@@ -57,7 +85,7 @@
     header p {
       font-size: 1.2rem;
       max-width: 800px;
-      margin: 0 auto;
+      margin: 0 auto 2rem;
     }
 
     main {
@@ -93,18 +121,22 @@
       margin-bottom: 0.75rem;
     }
 
-    svg {
-      display: block;
-      margin: 1rem auto;
-      max-width: 100%;
-    }
-
     footer {
+      background: #f1f1f1;
+      padding: 2rem 1rem;
       text-align: center;
       font-size: 0.9rem;
-      color: #666;
-      margin: 2rem auto;
-      padding-bottom: 2rem;
+      color: #555;
+    }
+
+    footer a {
+      color: var(--primary-color);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     .button-link {
@@ -116,7 +148,7 @@
       text-decoration: none;
       font-weight: bold;
       text-align: center;
-      margin-top: 2rem;
+      margin-top: 1rem;
     }
 
     .button-link:hover {
@@ -125,57 +157,57 @@
   </style>
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#why">Why DBF</a></li>
+      <li><a href="#considerations">Considerations</a></li>
+      <li><a href="#tips">Tips</a></li>
+      <li><a href="#verdict">Final Verdict</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
   <header>
     <h1>Introduction to Deep Bed Farming</h1>
     <p>
       Deep Bed Farming (DBF) is a simple and natural way of gardening. It gives plants more room to grow by making the soil deeper, healthier, and easier to manage. It's especially useful on UK allotments.
     </p>
+    <a href="#why" class="button-link">Learn Why DBF Works →</a>
   </header>
 
+  <!-- Main Content -->
   <main>
-
-    <section>
+    <section id="why">
       <h2>✅ Why Deep Bed Farming is a Smart Move for a UK Allotment</h2>
-
       <h3>1. Improved Drainage in a Rain-Prone Climate</h3>
-      <p>
-        Raised deep beds help prevent waterlogging by letting rain drain down through the soil. At the same time, they hold onto enough moisture for plants to thrive.
-      </p>
+      <p>Raised deep beds help prevent waterlogging by letting rain drain down through the soil. At the same time, they hold onto enough moisture for plants to thrive.</p>
 
       <h3>2. Combatting Soil Compaction</h3>
-      <p>
-        Deep beds break through compacted soil (called hardpan), letting roots, water, and air reach deeper. This means healthier and stronger plants.
-      </p>
+      <p>Deep beds break through compacted soil (called hardpan), letting roots, water, and air reach deeper. This means healthier and stronger plants.</p>
 
       <h3>3. Maximising Limited Space</h3>
-      <p>
-        With better soil and root depth, you can grow more in a small area. That means more food from less space.
-      </p>
+      <p>With better soil and root depth, you can grow more in a small area. That means more food from less space.</p>
 
       <h3>4. Boosting Soil Fertility Organically</h3>
-      <p>
-        Deep beds let you add compost and rich materials easily, helping you grow healthy, strong crops without chemicals.
-      </p>
+      <p>Deep beds let you add compost and rich materials easily, helping you grow healthy, strong crops without chemicals.</p>
 
       <h3>5. Extended Growing Season</h3>
-      <p>
-        Raised beds warm up faster in spring, so you can plant earlier and grow for longer — a big bonus in the UK!
-      </p>
+      <p>Raised beds warm up faster in spring, so you can plant earlier and grow for longer — a big bonus in the UK!</p>
 
       <h3>6. Easier to Manage (and Kinder on the Back!)</h3>
-      <p>
-        Raised beds are easier to reach and care for. You can weed, water, and harvest without bending too far.
-      </p>
+      <p>Raised beds are easier to reach and care for. You can weed, water, and harvest without bending too far.</p>
     </section>
 
-    <section>
+    <section id="considerations">
       <h2>⚠️ Things to Consider Before You Start</h2>
       <p><strong>Initial Effort & Materials:</strong> Building deep beds takes work and materials like wood, compost, and topsoil. But once they’re in place, they’re easy to maintain.</p>
       <p><strong>Watering in Drier Months:</strong> Raised beds dry out faster in hot weather. Use mulch and plan for smart watering (like using saved rainwater).</p>
       <p><strong>Plot Rules:</strong> Some allotment sites have rules about bed height or materials. Check before you build.</p>
     </section>
 
-    <section>
+    <section id="tips">
       <h2>🌱 Sustainable Tips</h2>
       <ul>
         <li>Use old bricks, reclaimed wood, or pallets for bed frames.</li>
@@ -184,21 +216,24 @@
       </ul>
     </section>
 
-    <section>
+    <section id="verdict">
       <h2>🧑‍🌾 Final Verdict</h2>
-      <p>
-        Deep bed farming is a smart, eco-friendly method for UK gardeners. It helps you grow more food, protect your soil, and enjoy your plot with less effort over time.
-      </p>
+      <p>Deep bed farming is a smart, eco-friendly method for UK gardeners. It helps you grow more food, protect your soil, and enjoy your plot with less effort over time.</p>
       <div style="text-align:center;">
         <a href="deep-bed-farming-sustainability.html" class="button-link">Next: Environmental Considerations →</a>
       </div>
     </section>
-
   </main>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Your Community Garden Group. All rights reserved.</p>
+    <p>
+      <a href="#top">Back to Top</a> |
+      <a href="#why">Why DBF</a> |
+      <a href="#tips">Tips</a>
+    </p>
   </footer>
+
 </body>
 </html>
-
